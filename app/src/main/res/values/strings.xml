@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="seconds">Seconds</string>
+    <string name="minutes">Minutes</string>
+    <string name="time_converter">Time Converter</string>
+    <string name="length_converter">Length Converter</string>
+    <string name="temperature_converter">Temperature Converter</string>
+    <string name="from">From:</string>
+    <string name="to">To:</string>
+    <string name="hours">Hours</string>
+    <string name="days">Days</string>
+    <string name="weeks">Weeks</string>
+    <string name="months">Months</string>
+    <string name="years">Years</string>
+    <string name="this_view_is_just_used_for_underlining_the_upper_textview">This view is just used for underlining the upper textView</string>
+    <string name="time_icon">Time Icon</string>
+    <string name="weight_converter">Weight Converter</string>
+</resources>

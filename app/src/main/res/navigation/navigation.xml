@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.unitconverter.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_timeConverterFragment"
+            app:destination="@id/timeConverterFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_lengthConverterFragment"
+            app:destination="@id/lengthConverterFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_temperatureConverterFragment"
+            app:destination="@id/temperatureConverterFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_weightConverterFragment"
+            app:destination="@id/weightConverterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeConverterFragment"
+        android:name="com.example.unitconverter.TimeConverterFragment"
+        android:label="Time Converter"
+        tools:layout="@layout/fragment_time_converter" >
+        <action
+            android:id="@+id/action_timeConverterFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/lengthConverterFragment"
+        android:name="com.example.unitconverter.LengthConverterFragment"
+        android:label="fragment_length_converter"
+        tools:layout="@layout/fragment_length_converter" >
+        <action
+            android:id="@+id/action_lengthConverterFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/temperatureConverterFragment"
+        android:name="com.example.unitconverter.TemperatureConverterFragment"
+        android:label="fragment_temperature_converter"
+        tools:layout="@layout/fragment_temperature_converter" >
+        <action
+            android:id="@+id/action_temperatureConverterFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/weightConverterFragment"
+        android:name="com.example.unitconverter.WeightConverterFragment"
+        android:label="fragment_weight_converter"
+        tools:layout="@layout/fragment_weight_converter" >
+        <action
+            android:id="@+id/action_weightConverterFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

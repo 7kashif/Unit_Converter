@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TemperatureConverterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="268dp"
+            android:text="@string/from"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/baseValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="256dp"
+            android:inputType="numberDecimal"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/fromSpinner"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/from"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/fromSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="268dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/to"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/from" />
+
+        <TextView
+            android:id="@+id/convertedValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:inputType="numberDecimal"
+            android:padding="5dp"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/toSpinner"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/to"
+            app:layout_constraintTop_toBottomOf="@id/baseValue"
+            tools:ignore="TextViewEdits" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@color/off_black"
+            app:layout_constraintTop_toBottomOf="@id/convertedValue"
+            app:layout_constraintStart_toStartOf="@id/convertedValue"
+            app:layout_constraintEnd_toEndOf="@id/convertedValue"
+            android:contentDescription="@string/this_view_is_just_used_for_underlining_the_upper_textview" />
+
+        <Spinner
+            android:id="@+id/toSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fromSpinner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
