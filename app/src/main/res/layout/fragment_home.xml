@@ -6,7 +6,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HomeFragment">
+        tools:context=".HomeFragment"
+        android:background="@drawable/home_screen_bg">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="25sp"
+            android:background="@color/off_black"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <LinearLayout
             android:id="@+id/time_length_layout"
@@ -17,26 +27,19 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/temp_weight_layout">
-            <ImageView
+
+            <Button
                 android:id="@+id/toTimeFragment"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:src="@drawable/time_icon"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:clickable="true"
-                android:focusable="true"
+                android:background="@drawable/time_icon"
                 android:elevation="10dp"
                 android:layout_marginBottom="15dp"/>
             <ImageView
                 android:id="@+id/toLengthFragment"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:src="@drawable/length_icon"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:clickable="true"
-                android:focusable="true"
+                android:background="@drawable/length_icon"
                 android:elevation="10dp" />
         </LinearLayout>
         <LinearLayout
@@ -48,26 +51,17 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/time_length_layout"
             app:layout_constraintTop_toTopOf="parent">
-            <ImageView
+            <Button
                 android:id="@+id/toTempFragment"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:src="@drawable/temp_icon"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:clickable="true"
-                android:focusable="true"
-                android:elevation="10dp"
+                android:background="@drawable/temp_icon"
                 android:layout_marginBottom="15dp"/>
-            <ImageView
+            <Button
                 android:id="@+id/toWeightFragment"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:src="@drawable/weight_icon"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:clickable="true"
-                android:focusable="true"
+                android:background="@drawable/weight_icon"
                 android:elevation="10dp" />
         </LinearLayout>
 
