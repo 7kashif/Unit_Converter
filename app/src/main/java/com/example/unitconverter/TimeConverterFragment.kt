@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.unitconverter.databinding.FragmentTimeConverterBinding
 
 
@@ -29,6 +30,11 @@ class TimeConverterFragment : Fragment(),AdapterView.OnItemSelectedListener {
         binding.fromSpinner.onItemSelectedListener=this
         binding.toSpinner.onItemSelectedListener=this
         textChangedListener()
+
+        binding.backButton.setOnClickListener {
+            this.findNavController().navigate(TimeConverterFragmentDirections.actionTimeConverterFragmentToHomeFragment())
+        }
+
         return binding.root
     }
 
@@ -41,13 +47,13 @@ class TimeConverterFragment : Fragment(),AdapterView.OnItemSelectedListener {
 
     private fun textChangedListener(){
         binding.baseValue.addTextChangedListener(object:TextWatcher{
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int)=Unit
             override fun onTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 toSeconds(s.toString())
                 if(s.toString().isEmpty())
                     binding.convertedValue.text="0.0"
             }
-            override fun afterTextChanged(p0: Editable?) {}
+            override fun afterTextChanged(p0: Editable?)=Unit
         })
     }
 
@@ -78,4 +84,5 @@ class TimeConverterFragment : Fragment(),AdapterView.OnItemSelectedListener {
         }
         binding.convertedValue.text=value.toString()
     }
+
 }

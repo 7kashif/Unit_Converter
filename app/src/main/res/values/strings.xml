@@ -17,4 +17,5 @@
     <string name="this_view_is_just_used_for_underlining_the_upper_textview">This view is just used for underlining the upper textView</string>
     <string name="time_icon">Time Icon</string>
     <string name="weight_converter">Weight Converter</string>
+    <string name="background_image">Background Image</string>
 </resources>

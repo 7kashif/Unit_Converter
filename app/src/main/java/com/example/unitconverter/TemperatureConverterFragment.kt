@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.unitconverter.databinding.FragmentTemperatureConverterBinding
 
 
@@ -27,6 +28,11 @@ class TemperatureConverterFragment : Fragment(),AdapterView.OnItemSelectedListen
         binding.fromSpinner.onItemSelectedListener=this
         binding.toSpinner.onItemSelectedListener=this
         textChangedListener()
+
+        binding.backButton.setOnClickListener {
+            this.findNavController().navigate(TemperatureConverterFragmentDirections.actionTemperatureConverterFragmentToHomeFragment())
+        }
+
         return binding.root
     }
 

@@ -17,7 +17,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding:FragmentHomeBinding=DataBindingUtil.inflate(inflater,R.layout.fragment_home,container,false)
-
         binding.toTimeFragment.setOnClickListener {
             this.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToTimeConverterFragment())
         }

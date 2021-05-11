@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.unitconverter.databinding.FragmentLengthConverterBinding
 
 
@@ -27,6 +28,11 @@ class LengthConverterFragment : Fragment(),AdapterView.OnItemSelectedListener {
         binding.fromSpinner.onItemSelectedListener=this
         binding.toSpinner.onItemSelectedListener=this
         textChangedListener()
+
+        binding.backButton.setOnClickListener {
+            this.findNavController().navigate(LengthConverterFragmentDirections.actionLengthConverterFragmentToHomeFragment())
+        }
+
         return binding.root
     }
 
